@@ -21,7 +21,7 @@ const i18n = createI18n({
       "remove-row": "Remove row",
       calculate: "Calculate",
       result: "Result",
-      "result-message": "Your weighted average is: ",
+      "result-message": "Your weighted average is ",
     },
     es: {
       username: "Usuario",
@@ -41,7 +41,7 @@ const i18n = createI18n({
       "remove-row": "Eliminar fila",
       calculate: "Calcular",
       result: "Resultado",
-      "result-message": "Tu promedio ponderado es: ",
+      "result-message": "Tu promedio ponderado es ",
     },
   },
 });
