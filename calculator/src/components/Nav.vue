@@ -11,8 +11,8 @@
     <nav :class="{'hidden': !isMenuOpen}" class="flex flex-col sm:flex-row sm:ml-auto mt-2 sm:mt-0">
       <a class="mt-2 mr-5 underline hover:text-cyan-300 transition-colors" href="">{{ $t("header-a") }}</a>
       <select class="mt-2 text-black w-auto max-w-min" @change="changeLocale" style="overflow: hidden; text-overflow: ellipsis;">
-        <option value="en">{{ $t("header-en") }}</option>
         <option value="es">{{ $t("header-es") }}</option>
+        <option value="en">{{ $t("header-en") }}</option>
       </select>
     </nav>
   </header>
