@@ -1,11 +1,11 @@
 <script setup>
 //import TheWelcome from '../components/TheWelcome.vue'
-import HeaderComponentVue from '../components/HeaderComponent.vue';
+import Nav from '../components/Nav.vue';
 </script>
 
 <template>
   <main>
-    <HeaderComponentVue />
-    <h1>Hola</h1>
+    <Nav />
+    <!--<h1>Hola</h1>-->
   </main>
 </template>

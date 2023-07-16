@@ -1,23 +1,23 @@
-import { createI18n } from 'vue-i18n'
+import { createI18n } from "vue-i18n";
 
 const i18n = createI18n({
-  locale:'en',
-  messages:{
-    en:{
-      "username":'User',
-      "clickme":'Click me!'
+  locale: "en",
+  messages: {
+    en: {
+      username: "User",
+      clickme: "Click me!",
+      "header-title": "Weighted Average Calculator",
+      "header-a": "Other calculators",
     },
-    es:{
-      "username":'Usuario',
-      "clickme":'¡Haz click!'
+    es: {
+      username: "Usuario",
+      clickme: "¡Haz click!",
+      "header-title": "Calculadora de Promedio Ponderado",
+      "header-a": "Otras calculadoras",
     },
-    fr:{
-      "username":'Utilisateur',
-      "clickme":'¡Cliquez sur!'
-    }
-  }
-})
+  },
+});
 
-export  default  i18n;
+export default i18n;
 
 //para usar = {{$t('username')}}
