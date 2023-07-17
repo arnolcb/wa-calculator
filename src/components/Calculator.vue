@@ -53,7 +53,7 @@
       {{ $t("calculate") }}
     </button>
   </div>
-  <div class="font-normal font-mono mt-2 ml-6">{{ $t("result-message") }}: {{ result !== null ? result.toFixed(2) : "" }}</div>
+  <div class="font-normal font-mono mt-2 ml-6 mb-10">{{ $t("result-message") }}: {{ result !== null ? result.toFixed(2) : "" }}</div>
 </template>
 
 <script>
