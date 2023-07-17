@@ -3,14 +3,46 @@
     <div class="flex items-center justify-between sm:justify-start">
       <div class="mt-2 font-bold">{{ $t("header-title") }}</div>
       <button class="sm:hidden text-white" @click="toggleMenu">
-        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg
+          class="w-6 h-6"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4 6H20M4 12H20M4 18H20"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
         </svg>
       </button>
     </div>
-    <nav :class="{'hidden': !isMenuOpen}" class="flex flex-col sm:flex-row sm:ml-auto mt-2 sm:mt-0">
-      <a class="mt-2 mr-5 underline hover:text-cyan-300 transition-colors" href="">{{ $t("header-a") }}</a>
-      <select class="mt-2 text-black w-auto max-w-min" @change="changeLocale" style="overflow: hidden; text-overflow: ellipsis;">
+    <nav
+      :class="{ hidden: !isMenuOpen }"
+      class="flex flex-col sm:flex-row sm:ml-auto mt-2 sm:mt-0"
+    >
+      <a
+        class="mt-2 mr-5 underline hover:text-cyan-300 transition-colors"
+        href=""
+        >{{ $t("header-a") }}</a
+      >
+      <div class="mt-2 mr-5 text-xl">
+        <a
+      href="https://github.com/arnolcb"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="hover:text-cyan-300 transition-colors"
+    >
+        <i class="fa-brands fa-github" style="color: #ffffff"></i>
+        </a>
+      </div>
+      <select
+        class="mt-2 text-black w-auto max-w-min"
+        @change="changeLocale"
+        style="overflow: hidden; text-overflow: ellipsis"
+      >
         <option value="es">{{ $t("header-es") }}</option>
         <option value="en">{{ $t("header-en") }}</option>
       </select>
@@ -35,7 +67,8 @@ export default {
       this.$i18n.locale = selectedLocale;
     },
     handleResize() {
-      if (window.innerWidth >= 640) { // Aquí puedes ajustar el ancho de pantalla a partir del cual se mostrarán automáticamente los elementos de navegación
+      if (window.innerWidth >= 640) {
+        // Aquí puedes ajustar el ancho de pantalla a partir del cual se mostrarán automáticamente los elementos de navegación
         this.isMenuOpen = true;
       } else {
         this.isMenuOpen = false;
@@ -43,11 +76,11 @@ export default {
     },
   },
   mounted() {
-    window.addEventListener('resize', this.handleResize);
+    window.addEventListener("resize", this.handleResize);
     this.handleResize(); // Para que el estado inicial sea correcto en función del ancho de la pantalla al cargar la página
   },
   beforeDestroy() {
-    window.removeEventListener('resize', this.handleResize);
+    window.removeEventListener("resize", this.handleResize);
   },
 };
 </script>
